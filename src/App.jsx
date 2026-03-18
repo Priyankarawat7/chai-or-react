@@ -1,17 +1,16 @@
 import React from 'react'
-import Chai from './components/Chai'
+import Counter from './components/Counter'
 
 function App() {
   return (
     <>
-    <Chai/>
-   <h1>chai is running</h1>
-
+    <Counter/>
+      
     </>
-  
   )
 }
 
 export default App
+
 
 

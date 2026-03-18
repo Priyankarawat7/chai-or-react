@@ -16,4 +16,11 @@ react-> react-dom (for browser)
      #file name first letter should be Capital letter
      ##code should be wrapped <></> fragment
 
+
+     ##javascript+html=JSX
+
+
+     ##customreact vs vite react
+
+     
      
