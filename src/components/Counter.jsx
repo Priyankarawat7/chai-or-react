@@ -12,7 +12,7 @@ function Counter() {
         {
             alert(' not greater than 20')
             
-        }
+        }     
 
         else{
               SetCounter(counter+1)
