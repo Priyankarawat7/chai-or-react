@@ -5,6 +5,7 @@ function Counter() {
   let [counter,SetCounter] = useState(15)
 //   useState se 2 chize milti h array ke format mai [value,function]
 // values update 
+// saare variables ko batches mai bhjta h using fibre algo.
 
     const incval=()=>{
 
@@ -16,10 +17,16 @@ function Counter() {
 
         else{
               SetCounter(counter+1)
+              console.log(counter);
+              
 
         }
-        //console.log('clicked',counter);
-        // counter=counter+1
+        console.log('clicked',counter);
+        counter=counter+1
+
+
+
+     
       
   }
 
@@ -35,6 +42,12 @@ function Counter() {
         }
 
     // counter=counter-1;
+
+        /* Interview question what is the answer
+         SetCounter((preCounter)=>preCounter+1)
+       SetCounter((preCounter)=>preCounter+1)
+       SetCounter((preCounter)=>preCounter+1)
+       SetCounter((preCounter)=>preCounter+1) incre 4*/ 
    
     
   }
@@ -42,7 +55,7 @@ function Counter() {
   return (
     <>
      
-    <h1>Chai or react</h1>    <h2>Counter value: {counter} </h2>
+    <h1>Chai or react</h1> <h2>Counter value: {counter} </h2>
    <button onClick={incval}>Increase value</button>
    
    <button onClick={decval}> Decrease value </button>

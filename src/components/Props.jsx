@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Props({username, btnText="visit me"}) {
-  //default value
+  //default value                          
     // console.log("props",Props);
   //  (Props)
    // console.log(Props.username);
