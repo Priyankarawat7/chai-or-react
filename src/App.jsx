@@ -1,10 +1,15 @@
 import React from 'react'
-import Counter from './components/Counter'
+
 import Tailwind from './components/Tailwind'
 import './index.css'
 import Props from './components/Props'
 import Project from './project/Project1'
 import Project2 from './project/Project2'
+import Switchonof from './project/Switchonof'
+import Input from './project/Input'
+import Counter2 from './project/Counter2'
+import Charcounter from './project/Charcounter'
+import Timer from './project/Timer'
 
 function App() {
   let myobj={
@@ -22,7 +27,12 @@ function App() {
    
     {/* <Counter/> */}
     {/* <Tailwind/> */}
-    <Project2/>
+    {/* <Project2/> */}
+    {/* <Switchonof/> */}
+    {/* <Input/> */}
+    {/* <Counter2/> */}
+    {/* <Charcounter/> */}
+    <Timer/>
     
       
     </>
