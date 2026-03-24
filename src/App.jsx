@@ -10,14 +10,19 @@ import Input from './project/Input'
 import Counter2 from './project/Counter2'
 import Charcounter from './project/Charcounter'
 import Timer from './project/Timer'
+import Counter from './project/Counter'
+import Currecyproject from './project/Currency_project/Currecyproject'
+import Autosaved from './project/Autosaved'
+import Clock from './project/Clock'
+
 
 function App() {
-  let myobj={
-    username:"priyanka",
-    age:32
-  }
+  // let myobj={
+  //   username:"priyanka",
+  //   age:32
+  // }
 
-  let newArry=[1,2,3,4]
+  // let newArry=[1,2,3,4]
   return (
     <>
       {/* <h1 className="text-3xl font-bold rounded-xl p-4 underline  text-center bg-yellow-300">
@@ -32,7 +37,16 @@ function App() {
     {/* <Input/> */}
     {/* <Counter2/> */}
     {/* <Charcounter/> */}
-    <Timer/>
+    {/* <Timer/> */}
+    
+  
+       {/* <h1 className='text-3xl text-center bg-orange-500'>Currency project</h1>
+        <Currecyproject/> */}
+        {/* <Autosaved/> */}
+        <Clock/>
+    
+
+    
     
       
     </>

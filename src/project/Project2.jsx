@@ -1,17 +1,29 @@
-import React, { useState,useCallback ,useEffect, useDebugValue} from 'react'
+import React, { useState,useCallback ,useEffect, useRef} from 'react'
 
 function Project2() {
 
   /*
+  useCallbakc:-
+  the useCallback Hook is used to memoize a callback function.
+  The useCallback function only re-executes when one of its dependencies changes value.
+
   useEffect hooks
   useEffect is a React Hook that lets you synchronize a component with an external system.
   never compare useeffect array with callback 
 
+
+  useref hook
+  The useRef Hook allows you to persist values between render
+  It can be used to access a DOM element directly.
+  to useRef you have to create variable
   */
   const [length, setLength]=useState(8)
   const[numberAllowed,setNumberAllowed]=useState(false)
   const[charAllowed, setCharAllowed]=useState(false)
   const[password,setPassword]=useState("");
+
+  //ref hook
+  const passwordRef=useRef(null);
 
   const passwordGenerator=useCallback(()=>{
     let pass=""
@@ -46,6 +58,14 @@ function Project2() {
    //Too many re-renders. 
    // React limits the number of renders to prevent an
    //  infinite loop. (so that i use useeffect for rendering)
+  
+  const copyPasswordToClipboard=useCallback(()=>{
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0,49)
+    window.navigator.clipboard.writeText(password)
+
+  },[password])
+
   useEffect(()=>{
       passwordGenerator()
   },[length,numberAllowed,charAllowed,passwordGenerator])
@@ -63,9 +83,10 @@ function Project2() {
         className='outline-none w-64 py-1 px-3'
         placeholder='password'
         readOnly
+        ref={passwordRef}
          />
      
-        <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
+        <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
            </div>
       
   

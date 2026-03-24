@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 function Counter() {
-  let [counter,SetCounter] = useState(15)
+  let [counter,SetCounter] = useState(0)
 //   useState se 2 chize milti h array ke format mai [value,function]
 // values update 
 // saare variables ko batches mai bhjta h using fibre algo.
@@ -44,7 +44,7 @@ function Counter() {
     // counter=counter-1;
 
         /* Interview question what is the answer
-         SetCounter((preCounter)=>preCounter+1)
+      SetCounter((preCounter)=>preCounter+1)
        SetCounter((preCounter)=>preCounter+1)
        SetCounter((preCounter)=>preCounter+1)
        SetCounter((preCounter)=>preCounter+1) incre 4*/ 
@@ -52,14 +52,29 @@ function Counter() {
     
   }
 
+  const Handleclick=()=>{
+
+    SetCounter(0);
+
+    
+
+  }
+
   return (
     <>
+     <div className='bg-orange-400 h-screen flex flex-col items-center justify-center"'>
+
      
     <h1>Chai or react</h1> <h2>Counter value: {counter} </h2>
-   <button onClick={incval}>Increase value</button>
-   
-   <button onClick={decval}> Decrease value </button>
-      <p>footer {counter}</p>
+    <div className="flex ">
+      <button onClick={incval} className='bg-white p-3 rounded-xl shadow-lg   gap-5 me-5'>Increase value</button>
+      <button onClick={decval} className='bg-white p-3 rounded-xl shadow-lg  gap-5 me-5'> Decrease value </button>
+      <button onClick={Handleclick} className='bg-white p-3 rounded-xl shadow-lg  gap-5 me-5'>Reset</button>
+     
+
+    </div>
+     <p>footer {counter}</p>
+    </div>
     </>
   )
 }

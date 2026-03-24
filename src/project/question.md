@@ -14,7 +14,7 @@
 
 
 **Advanced (This is where shallow understanding gets exposed)**
-1..You have two states: count and doubleCount. Update doubleCount whenever count changes using useEffect.
+1.You have two states: count and doubleCount. Update doubleCount whenever count changes using useEffect.
 👉 Now explain why this is often a bad pattern.
 2..Create a component that fetches data based on a userId prop.
 👉 Handle re-fetching when userId changes.
@@ -48,6 +48,93 @@ useEffect(() => {
 👉 When should you split logic?
 4.Stale closure problem
 👉 Create an example where useEffect uses outdated state and fix it.
+
 5.Build a live clock using useEffect that updates every second.
 👉 Make sure it doesn’t create multiple intervals
+
+
+
+
+
+
+**1.useState (State + Logic)**
+
+👉 Question: Counter with Limits
+
+Create a counter with:
+
+Increment
+Decrement
+Reset
+
+But here’s the twist:
+
+Count should never go below 0
+Show a message when count reaches 10: “Limit reached”
+
+What this tests:
+
+State control
+Conditional logic
+Edge cases (very important in interviews)
+
+
+
+🔄 2. useEffect (Side Effects Thinking)
+👉 Question: Auto Save Input
+You have a text input:
+
+When user types, wait for 2 seconds
+Then show “Saved”
+
+Twist:
+If user keeps typing, timer should reset
+Only save when user stops typing
+
+What this tests:
+Understanding of side effects
+Cleanup logic (this is where most people fail)
+
+🎯 3. useRef (Real-world usage)
+👉 Question: Focus Input Automatically
+
+There is an input field and a button
+When page loads → input should automatically focus
+When button is clicked → input should focus again
+
+Twist:
+Do it without re-rendering
+What this tests:
+DOM access
+Difference between state vs ref
+
+⚡ 4. useCallback (Performance + Thinking)
+👉 Question: Prevent Unnecessary Re-renders
+Parent component has a counter
+Child component has a button
+
+Problem:
+
+Child re-renders every time parent updates
+
+Task:
+Prevent unnecessary re-renders of child
+
+What this tests:
+
+Function identity
+Optimization thinking (interview favorite)
+⚠️ Important (don’t ignore this)
+
+If you do this like:
+
+“code dekh leta hoon fir samajh lunga”
+
+Then honestly — waste of time.
+
+Instead:
+
+Instead ask:
+👉 “main yahan tak socha, next kya karun?”
+
 
